@@ -3,7 +3,7 @@ package com.company.enroller.controllers;
 import java.util.Collection;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,10 @@ import com.company.enroller.model.Participant;
 import com.company.enroller.persistence.ParticipantService;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/participants")
 public class ParticipantRestController {
-
-	@Autowired
-	ParticipantService participantService;
+	private final ParticipantService participantService;
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ResponseEntity<?> getParticipants() {
@@ -28,9 +27,9 @@ public class ParticipantRestController {
 	public ResponseEntity<?> getParticipantsById(@PathVariable String id) {
 		Optional<Participant> participant = participantService.findByLogin(id);
 		if (participant.isEmpty()) {
-			return new ResponseEntity(HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Participant>(HttpStatus.NOT_FOUND);
 		}
-		return new ResponseEntity<Participant>(participant.get(), HttpStatus.OK);
+		return new ResponseEntity<>(participant.get(), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/{id}")

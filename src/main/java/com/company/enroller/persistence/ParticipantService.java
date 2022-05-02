@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.company.enroller.model.Participant;
 
+@SuppressWarnings("unchecked")
 @Component("participantService")
 public class ParticipantService {
 
@@ -20,7 +21,7 @@ public class ParticipantService {
 
 	public Collection<Participant> getAll() {
 		String hql = "FROM Participant";
-		Query query = connector.getSession().createQuery(hql);
+		Query<Participant> query = connector.getSession().createQuery(hql);
 		return query.list();
 	}
 
