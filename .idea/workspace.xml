@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6437e9c-6fca-40bb-8919-12f232ecd737" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/controllers/MeetingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/SQLiteIdentityColumnSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/exception/BadParticipantIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/service/MeetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/company/enroller/controllers/MeetingsControllerTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enroller.db" beforeDir="false" afterPath="$PROJECT_DIR$/enroller.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/controllers/MeetingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/controllers/MeetingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/controllers/ParticipantRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/controllers/ParticipantRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/model/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/model/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/model/Participant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/MeetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/MeetingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/ParticipantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/SQLiteDialect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/enroller/persistence/SQLiteDialect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/enroller/controllers/ParticipantRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/enroller/controllers/ParticipantRestControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +44,81 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.enroller.App" />
+  <component name="RunManager" selected="JUnit.ParticipantRestControllerTest">
+    <configuration name="MeetingsControllerTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="enroller" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.enroller.*" />
+          <option name="PATTERN" value="com.company.enroller.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.company.enroller.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.company.enroller.controllers.MeetingsControllerTestSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MeetingsControllerTestSuite.testDeleteMeeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="enroller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.enroller.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.enroller.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.company.enroller.controllers.MeetingsControllerTestSuite" />
+      <option name="METHOD_NAME" value="testDeleteMeeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MeetingsControllerTestSuite.testRemoveParticipantFromMeeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="enroller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.enroller.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.enroller.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.company.enroller.controllers.MeetingsControllerTestSuite" />
+      <option name="METHOD_NAME" value="testRemoveParticipantFromMeeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MeetingsControllerTestSuite.testUpdateMeeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="enroller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.enroller.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.enroller.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.company.enroller.controllers.MeetingsControllerTestSuite" />
+      <option name="METHOD_NAME" value="testUpdateMeeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParticipantRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="enroller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.enroller.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.enroller.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.company.enroller.controllers.ParticipantRestControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,7 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.ParticipantRestControllerTest" />
+        <item itemvalue="JUnit.MeetingsControllerTestSuite" />
+        <item itemvalue="JUnit.MeetingsControllerTestSuite.testRemoveParticipantFromMeeting" />
+        <item itemvalue="JUnit.MeetingsControllerTestSuite.testUpdateMeeting" />
+        <item itemvalue="JUnit.MeetingsControllerTestSuite.testDeleteMeeting" />
       </list>
     </recent_temporary>
   </component>
@@ -101,5 +166,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/enroller/service/MeetingService.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

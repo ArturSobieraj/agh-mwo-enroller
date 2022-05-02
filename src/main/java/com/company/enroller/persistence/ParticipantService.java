@@ -25,9 +25,9 @@ public class ParticipantService {
 		return query.list();
 	}
 
-	public Optional<Participant> findByLogin(String login) {
+	public Optional<Participant> findByLogin(String participantLogin) {
 		String hql = "FROM Participant WHERE login is :login";
-		Query<Participant> query = connector.getSession().createQuery(hql).setParameter("login", login);
+		Query<Participant> query = connector.getSession().createQuery(hql).setParameter("login", participantLogin);
 		//connector.getSession().get(Participant.class, login);
 		return query.uniqueResultOptional();
 	}

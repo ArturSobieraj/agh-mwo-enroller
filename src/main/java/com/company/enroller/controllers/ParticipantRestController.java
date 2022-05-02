@@ -3,6 +3,7 @@ package com.company.enroller.controllers;
 import java.util.Collection;
 import java.util.Optional;
 
+import com.company.enroller.exception.BadParticipantIdException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +39,7 @@ public class ParticipantRestController {
 		if (participant.isPresent()) {
 			participantService.deleteParticipant(participant.get());
 		} else {
-			throw new IllegalArgumentException();
+			throw new BadParticipantIdException();
 		}
 	}
 
@@ -49,7 +50,7 @@ public class ParticipantRestController {
 			return new ResponseEntity<>("Unable to create. A participant with login " + participant.getLogin() + " already exist.", HttpStatus.CONFLICT);
 		} else {
 			participantService.addParticipant(participant);
-			return new ResponseEntity<>("User " + participant.getLogin() + " added", HttpStatus.OK);
+			return new ResponseEntity<>("User " + participant.getLogin() + " added", HttpStatus.CREATED);
 		}
 	}
 

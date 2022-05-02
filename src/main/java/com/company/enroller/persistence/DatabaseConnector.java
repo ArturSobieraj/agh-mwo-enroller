@@ -16,7 +16,11 @@ public class DatabaseConnector {
 	private Session session;
 
 	private DatabaseConnector() {
-		session = HibernateUtil.getSessionFactory().openSession();
+		session = openSession();
+	}
+
+	public void closeSession() {
+		session.close();
 	}
 
 	public void teardown() {
@@ -29,4 +33,13 @@ public class DatabaseConnector {
 		return session;
 	}
 
+	public void openSessionIfClosed() {
+		if (!session.isOpen()) {
+			session = openSession();
+		}
+	}
+
+	private Session openSession() {
+		return HibernateUtil.getSessionFactory().openSession();
+	}
 }
